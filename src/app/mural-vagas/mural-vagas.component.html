@@ -1,0 +1,27 @@
+<section class="lista-vagas">
+    <!--Dirretiva de elemento do ANGULAR-->
+    <!-- *ngfor - Referencia para o comando de repetição -->
+    <!-- let - Cria uma variavel local -->
+    <!-- vaga - Variavel responsavel por receber/armazenar todos dados do vetor (vagas) de maneira unica -->
+    <!-- of vagas - Está fazendo a referencia ao meu vetor de vagas-->
+    <div *ngFor="let vaga of vagas">
+
+        <div class="card" style="width: 18rem;">
+            <!--Para a utilização do Atributo que foi criado devemos utilizar o que chamamos de
+            "Angular expression", que será responsavel por representar a variavel para que possemos
+            colocar em nosso vetor (vagas)-->
+            <img src="assets\img\vagas\{{vaga.foto}}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Código da vaga: {{vaga.id}}</h5>
+                <h5 class="card-title">Vaga: {{vaga.nome}}</h5>
+                <p class="card-text">Descrição: {{vaga.descricao}}</p>
+                <p class="card-text">Salário: R$ {{vaga.salario}},00</p>
+
+                <button type="button" routerLink="/editar">Editar Vaga</button>
+                <button type="button" (click)="excluir(vaga.id)">Excluir Vaga</button>
+            </div>
+        </div>
+
+    </div>
+
+</section>

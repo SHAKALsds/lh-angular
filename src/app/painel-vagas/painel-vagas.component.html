@@ -1,0 +1,16 @@
+<h2>Cadastrar</h2>
+
+<form action="">
+    <!-- ngModel - Diretiva que cuida da parte de atualização do model
+    () - Informa que ele irá enviar informações para a API
+    [] - Informa que ele irá receber informações para API
+    [()] - Informa que ele irá receber e enviar Informações para API-->
+    <label for="Id">Id</label><input type="text" name="id" [(ngModel)] = "vaga.id"><br>
+    <label for="Nome">Nome</label><input type="text" name="nome" [(ngModel)] = "vaga.nome"><br>
+    <label for="Foto">Foto</label><input type="text" name="foto" [(ngModel)] = "vaga.foto"><br>
+    <label for="Descrição">Descrição</label><input type="text" name="descricao" [(ngModel)] = "vaga.descricao"><br>
+    <label for="Salário">Salário</label><input type="text" name="salario" [(ngModel)] = "vaga.salario"><br>
+        
+    <!--(click) - Evento responsavel por chamar o metodo através de um click-->
+    <button type="button" (click)="cadastrar()">Cadastrar Vaga</button>
+</form>
